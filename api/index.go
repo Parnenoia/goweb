@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ type Film struct {
 	Director string
 }
 
-func main() {
+func Handler() {
 	fmt.Println("hello world")
 
 	h1 := func(w http.ResponseWriter, r *http.Request) {
