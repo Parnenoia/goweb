@@ -1,4 +1,4 @@
-package handler
+package main
 
 import (
 	"fmt"
@@ -12,11 +12,11 @@ type Film struct {
 	Director string
 }
 
-func Handler() {
+func main() {
 	fmt.Println("hello world")
 
 	h1 := func(w http.ResponseWriter, r *http.Request) {
-		tmpl := template.Must(template.ParseFiles("../index.html"))
+		tmpl := template.Must(template.ParseFiles("index.html"))
 		films := map[string][]Film{
 			"Films": {
 				{Title: "The Godfather", Director: "FFC"},
