@@ -5,10 +5,10 @@ import (
 	"net/http"
 )
 
-type Film struct {
-	Title    string
-	Director string
-}
+// type Film struct {
+// 	Title    string
+// 	Director string
+// }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("hello world")
