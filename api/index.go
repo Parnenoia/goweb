@@ -20,6 +20,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 	tmpl.Execute(w, films)
 
+	http.HandleFunc("/", Handler)
+
 	// title := r.PostFormValue("title")
 	// director := r.PostFormValue("director")
 	// htmlStr := fmt.Sprintf("<h2>%s</h2><h4>%s</h4>", title, director)
@@ -28,11 +30,4 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	// fmt.Print("Movie with title:", title, "and director:", director, "added\n")
 	// log.Print("HTMX request received")
 	// log.Print(r.Header.Get("HX-request"))
-}
-func main() {
-	http.HandleFunc("/", Handler)
-	// http.HandleFunc("/add-film/", h2)
-
-	// log.Fatal(http.ListenAndServe(":8000", nil))
-
 }
