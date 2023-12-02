@@ -13,7 +13,7 @@ type Film struct {
 }
 
 func HandlerOne(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles("index.html"))
+	tmpl := template.Must(template.ParseFiles("../index.html"))
 	films := map[string][]Film{
 		"Films": {
 			{Title: "The Godfather", Director: "FFC"},
