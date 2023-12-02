@@ -16,7 +16,7 @@ func HandlerOne(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("../index.html"))
 	films := map[string][]Film{
 		"Films": {
-			{Title: "The Godfather", Director: "FFC"},
+			{Title: "The Godfather", Director: "Franics Ford Coppola"},
 			{Title: "Blade Runnder", Director: "Ridley Scott"},
 		},
 	}
@@ -34,7 +34,7 @@ func HandlerTwo(w http.ResponseWriter, r *http.Request) {
 	log.Print(r.Header.Get("HX-request"))
 }
 
-func main() {
+func handler() {
 	http.HandleFunc("/", HandlerOne)
 	http.HandleFunc("/add-film/", HandlerTwo)
 
